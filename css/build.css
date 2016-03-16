@@ -1,0 +1,348 @@
+html {
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+  background-color: #fff;
+}
+body {
+  height: 100%;
+  margin: 0;
+  text-align: justify;
+  min-width: 992px;
+  background-color: #212c2f;
+}
+p {
+  line-height: 1.5;
+  font-size: 16px;
+  color: #333;
+}
+.section {
+  width: 100%;
+}
+.section > div {
+  *zoom: 1;
+  max-width: 1200px;
+  width: 80%;
+  margin: 0 auto;
+}
+.section > div:before,
+.section > div:after {
+  content: '';
+  display: table;
+}
+.section > div:after {
+  clear: both;
+}
+#A {
+  *zoom: 1;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.31), rgba(0,0,0,0.31)), url("../img/inicio.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+#A:before,
+#A:after {
+  content: '';
+  display: table;
+}
+#A:after {
+  clear: both;
+}
+#A > div {
+  position: relative;
+  top: 50%;
+  margin-top: -280px;
+}
+#A img {
+  height: 320px;
+}
+#A h1 {
+  font-size: 52px;
+  font-family: 'Fjalla One', sans-serif;
+}
+#A h3 {
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+#A i {
+  position: absolute;
+  bottom: 0;
+  font-size: 32px;
+  margin: 0 0 10px;
+}
+#B {
+  padding: 115px 0;
+}
+#B h2 {
+  font-size: 38px;
+  margin-top: -15px;
+}
+#B img {
+  height: 260px;
+  width: 260px;
+  border-radius: 130px;
+}
+#B > div > div {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 31.33333333333333%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+#B > div > div:before,
+#B > div > div:after {
+  content: '';
+  display: table;
+}
+#B > div > div:after {
+  clear: both;
+}
+#B > div > div:last-child {
+  margin-right: 0%;
+}
+#B > div > div:nth-child(3) {
+  text-align: center;
+}
+#C {
+  background: linear-gradient(rgba(0,0,0,0.29), rgba(0,0,0,0.29)), url("../img/disfrutar.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+  padding: 160px 0;
+}
+#C h1 {
+  font-size: 48px;
+  font-family: 'Fjalla One', sans-serif;
+}
+#D {
+  padding: 110px 0;
+}
+#D > div > div {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 29.999999999999996%;
+  margin-left: 0%;
+  margin-right: 5%;
+  text-align: center;
+}
+#D > div > div:before,
+#D > div > div:after {
+  content: '';
+  display: table;
+}
+#D > div > div:after {
+  clear: both;
+}
+#D > div > div:last-child {
+  margin-right: 0%;
+}
+#D > div > div > div:nth-child(1) {
+  text-align: center;
+}
+#D > div > div > div:nth-child(1) img {
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+  background-color: #ccc;
+  border-radius: 90px;
+  line-height: 180px;
+}
+#D > div > div > div:nth-child(2) {
+  font-style: italic;
+  color: #555;
+  margin: 25px 0;
+}
+#D > div > div > div:nth-child(2) p {
+  display: inline;
+}
+#D > div > div > div:nth-child(2) i {
+  font-size: 18px;
+  margin: 0 5px;
+  color: #d5b57f;
+}
+#D > div > div > div:nth-child(3) {
+  text-align: right;
+  font-weight: 600;
+}
+#E {
+  padding: 80px 0 90px;
+  background-color: #212c2f;
+  color: #fff;
+}
+#E h2 {
+  font-size: 38px;
+  text-align: center;
+}
+#E h3 {
+  font-size: 28px;
+}
+#E p {
+  color: #f5f5f5;
+}
+#E i {
+  position: relative;
+  color: #d5b57f;
+  font-size: 38px;
+  top: 3px;
+  margin: 0 10px 0 0;
+}
+#E > div > span {
+  position: relative;
+  display: inline-block;
+  width: 140px;
+  height: 3px;
+  background-color: #d5b57f;
+  margin: 5px 0 55px -70px;
+  left: 50%;
+}
+#E > div > div > div {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 42%;
+  margin-left: 0%;
+  margin-right: 16%;
+}
+#E > div > div > div:before,
+#E > div > div > div:after {
+  content: '';
+  display: table;
+}
+#E > div > div > div:after {
+  clear: both;
+}
+#E > div > div > div:last-child {
+  margin-right: 0%;
+}
+#F {
+  margin: 70px 0 90px;
+}
+#F h2 {
+  font-size: 38px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+#F h4 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 200;
+  margin: 10px 0 40px;
+}
+#F img {
+  margin: 20px 0 0;
+  *zoom: 1;
+  width: auto;
+  max-width: 90%;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+#F img:before,
+#F img:after {
+  content: '';
+  display: table;
+}
+#F img:after {
+  clear: both;
+}
+#F span {
+  position: relative;
+  display: inline-block;
+  width: 140px;
+  height: 3px;
+  background-color: #d5b57f;
+  margin: 0 0 0 -70px;
+  left: 50%;
+}
+#F > div > div > div {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 29.999999999999996%;
+  margin-left: 0%;
+  margin-right: 5%;
+  text-align: justified;
+  margin-top: 50px;
+}
+#F > div > div > div:before,
+#F > div > div > div:after {
+  content: '';
+  display: table;
+}
+#F > div > div > div:after {
+  clear: both;
+}
+#F > div > div > div:last-child {
+  margin-right: 0%;
+}
+#F > div > div > div > h3 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+#F > div > div > div > h3:nth-child(3) {
+  margin: 40px 0 10px;
+}
+#F > div > div > div > p {
+  margin: 0;
+}
+#G {
+  padding: 80px 0;
+  background-color: #212c2f;
+  color: #fff;
+}
+#G h3 {
+  font-size: 22px;
+}
+#G p {
+  color: #d5b57f;
+}
+#G > div > div {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 27.999999999999996%;
+  margin-left: 0%;
+  margin-right: 8%;
+}
+#G > div > div:before,
+#G > div > div:after {
+  content: '';
+  display: table;
+}
+#G > div > div:after {
+  clear: both;
+}
+#G > div > div:last-child {
+  margin-right: 0%;
+}
+#G > div > div:nth-child(1) span {
+  display: block;
+}
+#G > div > div:nth-child(1) span:nth-child(1) {
+  margin-top: 10px;
+  font-size: 38px;
+  font-weight: 200;
+}
+#G > div > div:nth-child(1) span:nth-child(2) {
+  width: 50px;
+  height: 3px;
+  background-color: #d5b57f;
+  margin: 15px 0;
+}
