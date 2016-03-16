@@ -1,0 +1,25 @@
+{
+  "name": "ElBarrilDeLaSabana",
+  "version": "0.0.1",
+  "description": "Company website.",
+  "repository": "https://github.com/dscastillo171/elBarril",
+  "main": "js/app.js",
+  "dependencies": {
+    "font-awesome": "^4.5.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-stylus": "^2.1.2",
+    "gulp-uglify": "^1.5.1",
+    "stylus": "0.52.*",
+    "jeet": "^6.1.2"
+  },
+  "scripts": {
+    "start": "npm run watch-stylus",
+    "build": "browserify js/app.js > js/bundle.js",
+    "build-stylus": "gulp build-css",
+    "watch-stylus": "gulp watch-stylus"
+  },
+  "author": "Santiago Castillo"
+}
