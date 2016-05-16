@@ -146,11 +146,6 @@ p {
 #A:after {
   clear: both;
 }
-@media (min-width: 768px) and (max-width: 1199px) {
-  #A {
-    background-attachment: fixed;
-  }
-}
 @media (min-width: 1200px) {
   #A {
     background-attachment: fixed;
@@ -267,11 +262,6 @@ p {
   color: #fff;
   text-align: center;
   padding: 160px 0;
-}
-@media (min-width: 768px) and (max-width: 1199px) {
-  #C {
-    background-attachment: fixed;
-  }
 }
 @media (min-width: 1200px) {
   #C {
