@@ -131,6 +131,9 @@ p {
   height: 100%;
   background: linear-gradient(rgba(0,0,0,0.31), rgba(0,0,0,0.31)), url("../img/inicio.jpg");
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -567,9 +570,15 @@ p {
 }
 @media (max-width: 767px) {
   #G p {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: lighter;
     letter-spacing: 0.05em;
+  }
+}
+@media (max-width: 767px) {
+  #G p.phone {
+    font-size: 28px;
+    font-weight: normal;
   }
 }
 @media (min-width: 768px) and (max-width: 1199px) {

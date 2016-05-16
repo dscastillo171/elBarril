@@ -123,6 +123,9 @@ p
   height 100%
   background linear-gradient(rgba(0,0,0,.31), rgba(0,0,0,.31)), url(../img/inicio.jpg)
   background-repeat no-repeat
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover
   background-size cover
   background-position center
   background-attachment fixed
@@ -364,9 +367,14 @@ p
   p
     color #D5B57F
     @media mobile
-      font-size 24px
+      font-size 22px
       font-weight lighter
       letter-spacing 0.05em
+
+    &.phone
+      @media mobile
+        font-size 28px
+        font-weight normal
 
     @media tablet
       font-size 26px
