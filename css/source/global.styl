@@ -125,14 +125,16 @@ p
   background linear-gradient(rgba(0,0,0,.31), rgba(0,0,0,.31)), url(../img/inicio.jpg)
   background-repeat no-repeat
   background-size cover
-  -webkit-background-size cover
-  -moz-background-size cover
-  -o-background-size cover
   background-position center
-  background-attachment fixed
   color #FFF
   text-align center
   position relative
+
+  @media tablet
+    background-attachment fixed
+
+  @media desktop
+    background-attachment fixed
 
   > div
     position relative
@@ -196,10 +198,15 @@ p
   background-repeat no-repeat
   background-size cover
   background-position center
-  background-attachment fixed
   color #FFF
   text-align center
   padding 160px 0
+
+  @media tablet
+    background-attachment fixed
+
+  @media desktop
+    background-attachment fixed
 
   h1
     font-size 48px
