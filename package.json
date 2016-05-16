@@ -5,7 +5,8 @@
   "repository": "https://github.com/dscastillo171/elBarril",
   "main": "js/app.js",
   "dependencies": {
-    "font-awesome": "^4.5.0"
+    "font-awesome": "^4.5.0",
+    "rupture": "^0.6.1"
   },
   "devDependencies": {
     "gulp": "^3.9.0",

@@ -1,5 +1,9 @@
 @import 'jeet'
 
+mobile = "(max-width: 767px)"
+tablet = "(min-width: 768px) and (max-width: 1199px)"
+desktop = "(min-width: 1200px)"
+
 html
   height 100%
   font-family 'Raleway', sans-serif
@@ -9,7 +13,6 @@ body
   height 100%
   margin 0
   text-align justify
-  min-width 992px
   background-color #212C2F
 
 p
@@ -26,6 +29,95 @@ p
     width 80%
     margin 0 auto
 
+#Contact
+  box-sizing border-box
+  position fixed
+  z-index 10
+  background-color #d5b57f
+  color #fff
+  box-shadow 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)
+  cursor pointer
+  text-align center
+  overflow hidden
+  transition: all 0.5s ease
+
+  @media mobile
+    width 100px
+    height 100px
+    border-radius 50px
+    bottom 20px
+    right 20px
+
+    i
+      transition: all 0.5s ease
+      font-size 50px
+      line-height 100px
+
+    span
+      opacity 0
+
+    &:hover
+      box-shadow 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+      width 106px
+      height 106px
+      border-radius 53px
+      bottom 21px
+      right 21px
+
+      i
+        font-size 53px
+        line-height 106px
+
+  @media tablet
+    width 120px
+    height 120px
+    border-radius 60px
+    bottom 20px
+    right 20px
+    white-space nowrap
+    padding-left: 30px;
+
+    i
+      font-size 60px
+      line-height 120px
+
+    span
+      opacity 0
+      font-size 50px
+      margin-left 8px
+
+    &:hover
+      width 440px
+      padding-left 0
+
+      span
+        opacity 1.0
+
+  @media desktop
+    width 140px
+    height 140px
+    border-radius 70px
+    bottom 40px
+    right 40px
+    white-space nowrap
+    padding-left: 35px;
+
+    i
+      font-size 70px
+      line-height 140px
+
+    span
+      opacity 0
+      font-size 60px
+      margin-left 10px
+
+    &:hover
+      width 520px
+      padding-left 0
+
+      span
+        opacity 1.0
+
 #A
   cf()
   height 100%
@@ -41,20 +133,17 @@ p
   > div
     position relative
     top 50%
-    margin-top -280px
+    margin-top -180px
 
   img
-    height 320px
-    margin-bottom 15px
+    @media mobile
+      width 100%
 
-  h1
-    font-size 52px
-    font-family 'Fjalla One', sans-serif
+    @media tablet
+      height 320px
 
-  h3
-    font-size 28px
-    letter-spacing 2px
-    margin-top -15px
+    @media desktop
+      height 380px
 
   i
     position absolute
@@ -63,23 +152,40 @@ p
     margin 0 0 10px
 
 #B
-  padding 115px 0
+  padding 100px 0
 
   h2
     font-size 38px
-    margin-top -15px
+    margin-top 20px
 
   img
+    margin-top: 30px;
     height 260px
     width 260px
     border-radius 130px
 
   > div
     & > div
-      column(1/3, gutter: 3.0)
+      @media tablet
+        column(1/2, gutter: 0.0)
+
+      @media desktop
+        column(1/3, gutter: 3.0)
+
+    > div:nth-child(1)
+      @media tablet
+        box-sizing: border-box
+        padding-right 10px;
+
+    > div:nth-child(2)
+      @media tablet
+        box-sizing: border-box
+        padding-left 10px;
 
     > div:nth-child(3)
       text-align center
+      @media tablet
+        display: none
 
 #C
   background linear-gradient(rgba(0,0,0,.29), rgba(0,0,0,.29)), url(../img/disfrutar.jpg)
@@ -96,12 +202,19 @@ p
     font-family 'Fjalla One', sans-serif
 
 #D
-  padding 110px 0
+  padding 90px 0
 
   > div
     & > div
-      column(1/3, gutter: 5.0)
       text-align center
+      @media mobile
+        margin-bottom 60px
+
+      @media tablet
+        margin-bottom 60px
+
+      @media desktop
+        column(1/3, gutter: 5.0)
 
       > div:nth-child(1)
         text-align center
@@ -145,6 +258,8 @@ p
 
   p
     color #F5F5F5
+    @media mobile
+      margin-bottom 40px
 
   i
     position relative
@@ -165,7 +280,11 @@ p
 
     > div
       > div
-        column(1/2, gutter: 16.0)
+        @media tablet
+          column(1/2)
+
+        @media desktop
+          column(1/2, gutter: 16.0)
 
 #F
   margin 70px 0 90px
@@ -180,6 +299,8 @@ p
     text-align center
     font-weight 200
     margin 10px 0 40px
+    @media mobile
+      margin-bottom 60px
 
   img
     margin 20px 0 0
@@ -197,9 +318,14 @@ p
   > div
     > div
       > div
-        column(1/3, gutter: 5.0)
         text-align justified
         margin-top 50px
+
+        @media tablet
+          column(1/2, gutter: 0)
+
+        @media desktop
+          column(1/3, gutter: 5.0)
 
         > h3
           font-size 22px
@@ -211,20 +337,58 @@ p
         > p
           margin 0
 
+      > div:nth-child(1)
+        @media tablet
+          box-sizing: border-box
+          padding-right: 10px
+
+      > div:nth-child(2)
+        @media tablet
+          box-sizing: border-box
+          padding-left: 10px
+
+      > div:nth-child(3)
+        @media tablet
+          column(1)
+
 #G
-  padding 80px 0
+  padding 80px 0 90px
   background-color #212C2F
   color #FFF
 
   h3
     font-size 22px
+    @media desktop
+      margin-top: 30px;
 
   p
     color #D5B57F
+    @media mobile
+      font-size 24px
+      font-weight lighter
+      letter-spacing 0.05em
+
+    @media tablet
+      font-size 26px
+      font-weight lighter
+      letter-spacing 0.1em
+
+    @media desktop
+      font-size 21px
+      font-weight lighter
+      letter-spacing 0.1em
 
   > div
     > div
-      column(1/3, gutter: 8.0)
+      @media mobile
+        margin-bottom 60px
+
+      @media tablet
+        text-align: center
+        margin-bottom 70px
+
+      @media desktop
+        column(1/3, gutter: 8.0)
 
     > div:nth-child(1)
       span
@@ -240,4 +404,6 @@ p
         height 3px
         background-color #D5B57F
         margin 15px 0
+        @media tablet
+          margin 15px auto
 
