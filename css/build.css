@@ -579,7 +579,7 @@ p {
 }
 @media (max-width: 767px) {
   #G p {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: lighter;
     letter-spacing: 0.05em;
   }
