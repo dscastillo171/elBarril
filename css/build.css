@@ -131,12 +131,14 @@ p {
   height: 100%;
   background: linear-gradient(rgba(0,0,0,0.31), rgba(0,0,0,0.31)), url("../img/inicio.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  height: 100%;
+  overflow: hidden;
   color: #fff;
   text-align: center;
   position: relative;
