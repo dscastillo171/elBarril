@@ -1,3 +1,6 @@
+a[href^="tel"] {
+  color: inherit;
+}
 html {
   height: 100%;
   font-family: 'Raleway', sans-serif;
@@ -7,7 +10,6 @@ body {
   height: 100%;
   margin: 0;
   text-align: justify;
-  min-width: 992px;
   background-color: #212c2f;
 }
 p {
@@ -32,14 +34,109 @@ p {
 .section > div:after {
   clear: both;
 }
+#Contact {
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 10;
+  background-color: #d5b57f;
+  color: #fff;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+@media (max-width: 767px) {
+  #Contact {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    bottom: 20px;
+    right: 20px;
+  }
+  #Contact i {
+    transition: all 0.5s ease;
+    font-size: 50px;
+    line-height: 100px;
+  }
+  #Contact span {
+    opacity: 0;
+  }
+  #Contact:hover {
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 106px;
+    height: 106px;
+    border-radius: 53px;
+    bottom: 21px;
+    right: 21px;
+  }
+  #Contact:hover i {
+    font-size: 53px;
+    line-height: 106px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  #Contact {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    bottom: 20px;
+    right: 20px;
+    white-space: nowrap;
+    padding-left: 30px;
+  }
+  #Contact i {
+    font-size: 60px;
+    line-height: 120px;
+  }
+  #Contact span {
+    opacity: 0;
+    font-size: 50px;
+    margin-left: 8px;
+  }
+  #Contact:hover {
+    width: 440px;
+    padding-left: 0;
+  }
+  #Contact:hover span {
+    opacity: 1;
+  }
+}
+@media (min-width: 1200px) {
+  #Contact {
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    bottom: 40px;
+    right: 40px;
+    white-space: nowrap;
+    padding-left: 35px;
+  }
+  #Contact i {
+    font-size: 70px;
+    line-height: 140px;
+  }
+  #Contact span {
+    opacity: 0;
+    font-size: 60px;
+    margin-left: 10px;
+  }
+  #Contact:hover {
+    width: 520px;
+    padding-left: 0;
+  }
+  #Contact:hover span {
+    opacity: 1;
+  }
+}
 #A {
   *zoom: 1;
+  box-sizing: content-box;
   height: 100%;
   background: linear-gradient(rgba(0,0,0,0.31), rgba(0,0,0,0.31)), url("../img/inicio.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   color: #fff;
   text-align: center;
   position: relative;
@@ -52,21 +149,30 @@ p {
 #A:after {
   clear: both;
 }
+@media (min-width: 1200px) {
+  #A {
+    background-attachment: fixed;
+  }
+}
 #A > div {
   position: relative;
   top: 50%;
-  margin-top: -280px;
+  margin-top: -180px;
 }
-#A img {
-  height: 320px;
+@media (max-width: 767px) {
+  #A img {
+    width: 100%;
+  }
 }
-#A h1 {
-  font-size: 52px;
-  font-family: 'Fjalla One', sans-serif;
+@media (min-width: 768px) and (max-width: 1199px) {
+  #A img {
+    height: 320px;
+  }
 }
-#A h3 {
-  font-size: 28px;
-  letter-spacing: 2px;
+@media (min-width: 1200px) {
+  #A img {
+    height: 380px;
+  }
 }
 #A i {
   position: absolute;
@@ -75,77 +181,137 @@ p {
   margin: 0 0 10px;
 }
 #B {
-  padding: 115px 0;
+  padding: 100px 0;
 }
 #B h2 {
   font-size: 38px;
-  margin-top: -15px;
+  margin-top: 20px;
 }
 #B img {
+  margin-top: 30px;
   height: 260px;
   width: 260px;
   border-radius: 130px;
 }
-#B > div > div {
-  *zoom: 1;
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 31.33333333333333%;
-  margin-left: 0%;
-  margin-right: 3%;
+@media (min-width: 768px) and (max-width: 1199px) {
+  #B > div > div {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 50%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  #B > div > div:before,
+  #B > div > div:after {
+    content: '';
+    display: table;
+  }
+  #B > div > div:after {
+    clear: both;
+  }
+  #B > div > div:last-child {
+    margin-right: 0%;
+  }
 }
-#B > div > div:before,
-#B > div > div:after {
-  content: '';
-  display: table;
+@media (min-width: 1200px) {
+  #B > div > div {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 31.33333333333333%;
+    margin-left: 0%;
+    margin-right: 3%;
+  }
+  #B > div > div:before,
+  #B > div > div:after {
+    content: '';
+    display: table;
+  }
+  #B > div > div:after {
+    clear: both;
+  }
+  #B > div > div:last-child {
+    margin-right: 0%;
+  }
 }
-#B > div > div:after {
-  clear: both;
+@media (min-width: 768px) and (max-width: 1199px) {
+  #B > div > div:nth-child(1) {
+    box-sizing: border-box;
+    padding-right: 10px;
+  }
 }
-#B > div > div:last-child {
-  margin-right: 0%;
+@media (min-width: 768px) and (max-width: 1199px) {
+  #B > div > div:nth-child(2) {
+    box-sizing: border-box;
+    padding-left: 10px;
+  }
 }
 #B > div > div:nth-child(3) {
   text-align: center;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  #B > div > div:nth-child(3) {
+    display: none;
+  }
 }
 #C {
   background: linear-gradient(rgba(0,0,0,0.29), rgba(0,0,0,0.29)), url("../img/disfrutar.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   color: #fff;
   text-align: center;
   padding: 160px 0;
+}
+@media (min-width: 1200px) {
+  #C {
+    background-attachment: fixed;
+  }
 }
 #C h1 {
   font-size: 48px;
   font-family: 'Fjalla One', sans-serif;
 }
 #D {
-  padding: 110px 0;
+  padding: 90px 0;
 }
 #D > div > div {
-  *zoom: 1;
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 29.999999999999996%;
-  margin-left: 0%;
-  margin-right: 5%;
   text-align: center;
 }
-#D > div > div:before,
-#D > div > div:after {
-  content: '';
-  display: table;
+@media (max-width: 767px) {
+  #D > div > div {
+    margin-bottom: 60px;
+  }
 }
-#D > div > div:after {
-  clear: both;
+@media (min-width: 768px) and (max-width: 1199px) {
+  #D > div > div {
+    margin-bottom: 60px;
+  }
 }
-#D > div > div:last-child {
-  margin-right: 0%;
+@media (min-width: 1200px) {
+  #D > div > div {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 29.999999999999996%;
+    margin-left: 0%;
+    margin-right: 5%;
+  }
+  #D > div > div:before,
+  #D > div > div:after {
+    content: '';
+    display: table;
+  }
+  #D > div > div:after {
+    clear: both;
+  }
+  #D > div > div:last-child {
+    margin-right: 0%;
+  }
 }
 #D > div > div > div:nth-child(1) {
   text-align: center;
@@ -190,6 +356,11 @@ p {
 #E p {
   color: #f5f5f5;
 }
+@media (max-width: 767px) {
+  #E p {
+    margin-bottom: 40px;
+  }
+}
 #E i {
   position: relative;
   color: #d5b57f;
@@ -206,25 +377,49 @@ p {
   margin: 5px 0 55px -70px;
   left: 50%;
 }
-#E > div > div > div {
-  *zoom: 1;
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 42%;
-  margin-left: 0%;
-  margin-right: 16%;
+@media (min-width: 768px) and (max-width: 1199px) {
+  #E > div > div > div {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 48.5%;
+    margin-left: 0%;
+    margin-right: 3%;
+  }
+  #E > div > div > div:before,
+  #E > div > div > div:after {
+    content: '';
+    display: table;
+  }
+  #E > div > div > div:after {
+    clear: both;
+  }
+  #E > div > div > div:last-child {
+    margin-right: 0%;
+  }
 }
-#E > div > div > div:before,
-#E > div > div > div:after {
-  content: '';
-  display: table;
-}
-#E > div > div > div:after {
-  clear: both;
-}
-#E > div > div > div:last-child {
-  margin-right: 0%;
+@media (min-width: 1200px) {
+  #E > div > div > div {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 42%;
+    margin-left: 0%;
+    margin-right: 16%;
+  }
+  #E > div > div > div:before,
+  #E > div > div > div:after {
+    content: '';
+    display: table;
+  }
+  #E > div > div > div:after {
+    clear: both;
+  }
+  #E > div > div > div:last-child {
+    margin-right: 0%;
+  }
 }
 #F {
   margin: 70px 0 90px;
@@ -239,6 +434,11 @@ p {
   text-align: center;
   font-weight: 200;
   margin: 10px 0 40px;
+}
+@media (max-width: 767px) {
+  #F h4 {
+    margin-bottom: 60px;
+  }
 }
 #F img {
   margin: 20px 0 0;
@@ -270,26 +470,52 @@ p {
   left: 50%;
 }
 #F > div > div > div {
-  *zoom: 1;
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 29.999999999999996%;
-  margin-left: 0%;
-  margin-right: 5%;
   text-align: justified;
   margin-top: 50px;
 }
-#F > div > div > div:before,
-#F > div > div > div:after {
-  content: '';
-  display: table;
+@media (min-width: 768px) and (max-width: 1199px) {
+  #F > div > div > div {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 50%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  #F > div > div > div:before,
+  #F > div > div > div:after {
+    content: '';
+    display: table;
+  }
+  #F > div > div > div:after {
+    clear: both;
+  }
+  #F > div > div > div:last-child {
+    margin-right: 0%;
+  }
 }
-#F > div > div > div:after {
-  clear: both;
-}
-#F > div > div > div:last-child {
-  margin-right: 0%;
+@media (min-width: 1200px) {
+  #F > div > div > div {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 29.999999999999996%;
+    margin-left: 0%;
+    margin-right: 5%;
+  }
+  #F > div > div > div:before,
+  #F > div > div > div:after {
+    content: '';
+    display: table;
+  }
+  #F > div > div > div:after {
+    clear: both;
+  }
+  #F > div > div > div:last-child {
+    margin-right: 0%;
+  }
 }
 #F > div > div > div > h3 {
   font-size: 22px;
@@ -301,36 +527,115 @@ p {
 #F > div > div > div > p {
   margin: 0;
 }
+@media (min-width: 768px) and (max-width: 1199px) {
+  #F > div > div > div:nth-child(1) {
+    box-sizing: border-box;
+    padding-right: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  #F > div > div > div:nth-child(2) {
+    box-sizing: border-box;
+    padding-left: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  #F > div > div > div:nth-child(3) {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%;
+  }
+  #F > div > div > div:nth-child(3):before,
+  #F > div > div > div:nth-child(3):after {
+    content: '';
+    display: table;
+  }
+  #F > div > div > div:nth-child(3):after {
+    clear: both;
+  }
+  #F > div > div > div:nth-child(3):last-child {
+    margin-right: 0%;
+  }
+}
 #G {
-  padding: 80px 0;
+  padding: 80px 0 90px;
   background-color: #212c2f;
   color: #fff;
 }
 #G h3 {
   font-size: 22px;
 }
+@media (min-width: 1200px) {
+  #G h3 {
+    margin-top: 30px;
+  }
+}
 #G p {
   color: #d5b57f;
 }
-#G > div > div {
-  *zoom: 1;
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 27.999999999999996%;
-  margin-left: 0%;
-  margin-right: 8%;
+@media (max-width: 767px) {
+  #G p {
+    font-size: 18px;
+    font-weight: lighter;
+    letter-spacing: 0.05em;
+  }
 }
-#G > div > div:before,
-#G > div > div:after {
-  content: '';
-  display: table;
+@media (max-width: 767px) {
+  #G p.phone {
+    font-size: 28px;
+    font-weight: normal;
+  }
 }
-#G > div > div:after {
-  clear: both;
+@media (min-width: 768px) and (max-width: 1199px) {
+  #G p {
+    font-size: 26px;
+    font-weight: lighter;
+    letter-spacing: 0.1em;
+  }
 }
-#G > div > div:last-child {
-  margin-right: 0%;
+@media (min-width: 1200px) {
+  #G p {
+    font-size: 21px;
+    font-weight: lighter;
+    letter-spacing: 0.1em;
+  }
+}
+@media (max-width: 767px) {
+  #G > div > div {
+    margin-bottom: 60px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  #G > div > div {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+}
+@media (min-width: 1200px) {
+  #G > div > div {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 27.999999999999996%;
+    margin-left: 0%;
+    margin-right: 8%;
+  }
+  #G > div > div:before,
+  #G > div > div:after {
+    content: '';
+    display: table;
+  }
+  #G > div > div:after {
+    clear: both;
+  }
+  #G > div > div:last-child {
+    margin-right: 0%;
+  }
 }
 #G > div > div:nth-child(1) span {
   display: block;
@@ -345,4 +650,9 @@ p {
   height: 3px;
   background-color: #d5b57f;
   margin: 15px 0;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  #G > div > div:nth-child(1) span:nth-child(2) {
+    margin: 15px auto;
+  }
 }
